@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ïd">
+<head> 
+    <meta charset="UTF-8">
+    <title>Kalkulator Sederhana</title>
+    <script> 
+    window.onload = function(){
+    let angka1 = parseFloat(prompt("Masukkan Angka 1 : "));
+    let angka2 = parseFloat(prompt("Masukkan Angka 2 : "));
+    let operator = (prompt("Masukkan Operator (+, -, *, /) : "));
+    let hasil;
+
+        switch(operator) {
+            case "+":
+                hasil = angka1 + angka2
+                break;
+
+            case "-":
+                hasil = angka1 - angka2
+                break;
+
+            case "*":
+                hasil = angka1 * angka2
+                break;
+                
+            case "/":  // Jika / maka dibagi
+                if (angka2 !== 0) {
+                hasil = angka1 / angka2;
+            }    else {
+                hasil = "Error : Tidak bisa dibagi 0!";
+            }
+                break;
+            default:
+                hasil = "Operator tidak valid!";
+        }
+        alert("Hasil: " + hasil);
+
+}
+        </script>
+</head>
+<body> 
+</body>
+</html>
